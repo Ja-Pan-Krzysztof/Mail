@@ -8,11 +8,15 @@ load_dotenv()
 
 
 class Gmail:
-    def __init__(self, login, password):
-        self.login = login
+    def __init__(self, username: str, password: str, host: str, port: int):
+        self.username = username
         self.password = password
-        self.PORT = 465
-        self.HOST = 'smtp.gmail.com'
+
+        self.server = SMTP_SSL(host, port)
+
+    def login(self):
+        self.server.ehlo()
+        self.server.login(self.login, self.password)
 
 
 
