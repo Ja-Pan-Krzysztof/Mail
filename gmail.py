@@ -1,12 +1,6 @@
 from smtplib import SMTP_SSL
-from email.message import EmailMessage
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-
-from dotenv import load_dotenv
-from os import getenv
-
-load_dotenv()
 
 
 class Gmail:
@@ -28,6 +22,11 @@ class Gmail:
         message.attach(
             MIMEText(content, 'html')
         )
+
+        self.server.sendmail(self.username, recipent_email, message.as_string())
+
+    def __del__(self):
+        self.server.close()
 
 
 
