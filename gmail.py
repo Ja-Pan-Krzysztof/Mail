@@ -1,5 +1,7 @@
 from smtplib import SMTP_SSL
 from email.message import EmailMessage
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
 from dotenv import load_dotenv
 from os import getenv
@@ -17,6 +19,15 @@ class Gmail:
     def login(self):
         self.server.ehlo()
         self.server.login(self.login, self.password)
+
+    def send_mail(self, recipent_email: str, subject: str, content: str):
+        message = MIMEMultipart('alternative')
+        message['Subject'] = subject
+        message['From'] = self.username
+        message['To'] = recipent_email
+        message.attach(
+            MIMEText(content, 'html')
+        )
 
 
 
