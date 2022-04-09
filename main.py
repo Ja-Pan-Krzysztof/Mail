@@ -4,11 +4,10 @@ from message import Message
 from dotenv import load_dotenv
 from os import getenv
 
-# load data from .env file
 load_dotenv()
 
 
-#Logowanie
+# Log in
 mailer = Gmail(
     username=getenv('_USERNAME'),
     password=getenv('_PASSWORD'),
@@ -20,8 +19,8 @@ mailer.login()
 mess = Message()
 
 mailer.send_mail(
-    recipent_email='informatyka@pszczyna.edu.pl',
-    subject='Prezentacja JS testy jednostkowe',
+    recipent_email='recipent@gmail.com',
+    subject='<Your subject>',
     content=mess.render(),
     file='C:\\Users\\Ja\\Desktop\\prezentacja_brodacz_QUnit.odp'
 )
