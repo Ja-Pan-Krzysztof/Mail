@@ -49,7 +49,7 @@
     
 &nbsp;
 
-* Parameters in code
+* Parameters in `main.py`
   ```python
         mailer.send_mail(
             recipent_email='recipent@gmail.com',  # Enter recipent email
