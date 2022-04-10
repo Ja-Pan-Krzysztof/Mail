@@ -3,6 +3,11 @@
 
 &nbsp;
 
+[Google info](https://support.google.com/accounts/answer/6010255?p=less-secure-apps&hl=en&visit_id=637851202733248678-3898180947&rd=1)
+***
+
+&nbsp;
+
 ### Instalation
 ***
 
