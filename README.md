@@ -29,7 +29,7 @@
 * Download this repository
   * If you use GIT:
     ```git
-        git clone https://github.com/Ja-Pan-Krzysztof/instaling.git
+        git clone https://github.com/Ja-Pan-Krzysztof/Mail.git
     ```
 * Create `.env` file and enter that data :
     ```dotenv
